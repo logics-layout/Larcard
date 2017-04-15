@@ -1,7 +1,22 @@
 mixin header(data)
     .header(class!=data).not-styleLink
+        .header__nav
+            .container
+                .header__nav-table
+                    .header__nav-table-cell.header__nav-table-cell_logo
+                       a(href="#").header__nav-logo: +img('general/logo', 'svg')
+                    .header__nav-table-cell
+                        .header__nav-list
+                            ul
+                                li: a(href="#").color-black: span.color-black__title ГЛАВНАЯ
+                                li.active: a(href="#") МЕСТА
+                                li: a(href="#").color-black: span.color-black__title ДОСТАВКА
+                                li: a(href="#").color-black: span.color-black__title ПОЛУЧИТЬ КАРТУ
 
-
+                    .header__nav-table-cell.text-right
+                        a(href="#"): span.btn.btn-red.btn-border Регистрация
+                        |&nbsp;&nbsp;&nbsp;
+                        a(href="#"): span(style="width: 99px;").btn.btn-blue Войти
 
 
 
