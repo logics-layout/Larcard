@@ -5,3 +5,27 @@ mixin img(src, format)
 
 mixin icon(iconName, className, iconWidth, iconHeight)
     != jadeHelpers.Icon.call(locals, {iconName: iconName, className: className, iconWidth: iconWidth, iconHeight: iconHeight})
+
+
+mixin viewFilter(tagsList)
+    if tagsList && typeof(tagsList) == 'object'
+        .label-list
+            if tagsList.list
+                each tag, key in tagsList.list
+                    - var checked = false
+                    if key == 0
+                        - checked = true
+
+                    .label-list__section
+                        label.label-list__item
+                            input(type='radio', checked=checked, name='sss').label-list__item-input
+                            span.label-list__item-element: span= tag
+            if tagsList.search
+                - var searchValue = ''
+                if tagsList.searchValue
+                    - searchValue = tagsList.searchValue
+
+                .label-list__section
+                    .form-search
+                        input(placeholder="ПОИСК" value=searchValue).form-search__input
+                        button.form-search__btn: i.s-search

@@ -1,44 +1,61 @@
 mixin modal()
-    #callback(class="modal fade")
+    #time-delivery(class="modal fade")
         .modal-dialog.modal-md
             .modal-content
-                .modal-header.modal-padding
-                    p.modal-header__title Узнать цену
-                    //button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
-                .modal-body.modal-padding
-                    .row: .col-xs-11
-                        #callback-form
-                            .modal__table
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ваша заявка
-                                    div.modal__table-col
-                                        input.form-control(placeholder="Экскаватор TVEX 180W")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ваш город
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Приобретение в лизинг
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ф.И.О
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Эл. почта
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Телефон
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+
+                    p.modal-title: b УСЛОВИЯ ДОСТАВКИ
+
+                    p: b Бонусы начисяются пользователям, имеющим активированную Ларь-карту. Для получения бонусов необходимо авторизоваться на сайте!
+
+                    p Доставка блюд из ресторана Океан Grill осуществляется с 12:00 - 24:00 без выходных.
+                    p Прием заказов с 11:00 - 23:00
+                    p Минимальная сумма заказа - 500 руб.
+                    p Доставка осуществляется бесплатно. По доставке в удаленные районы спрашивайте у оператора.
+                    p ВАЖНО: минимально возможная сумма, принимаемая к оплате наличными рублями составляет: 400 руб. Т.е. Вы заказываете доставку на сумму 1000 руб., максимальное кол-во бонусов, которое Вы можете списать со счета - 600 в.руб, 400 руб. оплачиваете курьеру!
+                    p Срок годности всех блюд не более 24 часов при температуре от +2 до +6 °С
+
+    #yes-reviews(class="modal fade")
+        .modal-dialog.modal-md
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    br
+                    br
+                    br
+                    .text-center
+                        p.modal-title.modal-title_minMargin.ttu: b Спасибо за отзыв!
+                        p После проверки мы опубликуем его на сайте.
+                    br
+                    br
+                    br
+
+    #add-reviews(class="modal fade")
+        .modal-dialog.modal-md
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    p.modal-title.ttu: b оставить отзывы
+                    .form-group
+                        textarea.form-control(placeholder="Ваш комментарий", rows='5')
+                    button.btn.btn-blue.btn-border.btn-notBg(style="width: 270px;max-width: 100%;") Войти
+
+    #auth-phone(class="modal fade").modal-show
+        .modal-dialog.modal-sm
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    .text-center
+
+                        p.modal-title
+                            i.s-smartphone
                             br
-                            .text-center: button.btn.btn-orange.btn-ttu Отправить заявку
+                            b Вход по номеру телефона
+                    br
+                    .form-group
+                        input.form-control(placeholder="Введите номер телефона")
+                    button.btn.btn-red.btn-width.ttu.btn-textNormal отправить смс для авторизации
+
+
 

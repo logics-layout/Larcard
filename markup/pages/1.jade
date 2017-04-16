@@ -1,10 +1,12 @@
 extends _siteBar
 
 block head
+    - var headData = {title: "1.psd"}
     link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+    - var rightStyle = {banner: true, instagram: true, btn: true, counter: true, partners: true, blockBg: true}
+    - var tagsList = {list: ['Все', 'Новости', 'Акции'], search: false}
 
 block siteBar
-    - var rightStyle = {banner: true, instagram: true, btn: true}
 
     .itemList
         .itemList__section

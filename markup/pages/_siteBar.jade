@@ -1,44 +1,19 @@
 extends main
 
 block head
-    - var headData = {title: "Главная"}
     link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
 
 block content
-    .container
-        .label-list
-            .label-list__section
-                label.label-list__item
-                    input(type='radio', checked, name='sss').label-list__item-input
-                    span.label-list__item-element: span Все
-            .label-list__section
-                label.label-list__item
-                    input(type='radio', name='sss').label-list__item-input
-                    span.label-list__item-element: span Рестораны
-            .label-list__section
-                label.label-list__item
-                    input(type='radio', name='sss').label-list__item-input
-                    span.label-list__item-element: span Кафе
-            .label-list__section
-                label.label-list__item
-                    input(type='radio', name='sss').label-list__item-input
-                    span.label-list__item-element: span Бары
-            .label-list__section
-                label.label-list__item
-                    input(type='radio', name='sss').label-list__item-input
-                    span.label-list__item-element: span Магазины
-            .label-list__section
-                .form-search
-                    input(placeholder="ПОИСК").form-search__input.form-search__input_disabled
-                    button.form-search__btn: i.s-search
 
+    .container
+        +viewFilter(tagsList)
 
         br
         .content
             .content__left
                 block siteBar
 
-            .content__right
+            .content__right.hidden-sm-down
                 if rightStyle && typeof(rightStyle) == 'object'
                     if rightStyle.balans
                         p.title-small: b ТЕКУЩИЙ БАЛАНС
@@ -79,28 +54,52 @@ block content
                                 span.instagram-widget__link-section: +icon('vk', 'svg-vk', 16, 9)
                                 span.instagram-widget__link-section Подписаться на новости
 
+        br
+        br
+        br
         if rightStyle && typeof(rightStyle) == 'object' && rightStyle.btn
-            br
-            br
-            br
             .text-center
                 button.btn.btn-red.btn-border.btn-ttu(style="width: 145px;max-width: 100%;") ПОКАЗАТЬ ЕЩЁ
-
-
-        br
-        br
-        .partners
-            .partners__list
-                -for(var i = 0; i<9; i++)
-                    .partners__section: +img('content/partners/1')
-                    .partners__section: +img('content/partners/2')
-                    .partners__section: +img('content/partners/3')
             br
             br
-            .text-center
-                button.btn.btn-red.btn-border.btn-ttu(style="width: 145px;max-width: 100%;") посмотреть все
-        br
-        br
+            br
+
+    if rightStyle && typeof(rightStyle) == 'object' && rightStyle.counter
+        .counter.text-center
+            .container
+                .counter__sections
+                    .counter__sections-section Пользователей
+                    .counter__sections-section: +img('content/counter')
+                    .counter__sections-section в Likecard.me
+
+    if rightStyle && typeof(rightStyle) == 'object' && rightStyle.partners
+        .container
+            br
+            br
+            br
+            .partners
+                .partners__list
+                    -for(var i = 0; i<9; i++)
+                        .partners__section: +img('content/partners/1')
+                        .partners__section: +img('content/partners/2')
+                        .partners__section: +img('content/partners/3')
+                br
+                br
+                .text-center
+                    button.btn.btn-red.btn-border.btn-ttu(style="width: 145px;max-width: 100%;") посмотреть все
+            br
+            br
+            br
+    if rightStyle && typeof(rightStyle) == 'object' && rightStyle.blockBg
+        .block-bg
+            .container.text-center
+                .block-bg__table
+                    .block-bg__table-cell
+                        p.block-bg__title Be smart, use your like card #[br] Будь умнее, выбирай лучшее
+
+                        button.btn.btn-red.btn-border Получить карту
+                        span.hidden-xs-down &nbsp;
+                        button.btn.btn-blue(style="") Стать партнёром
 
 
 

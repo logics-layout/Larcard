@@ -39,6 +39,24 @@ body, html{
       }
     }
   }
+  .itemList {
+    margin: -8px;
+    &__section {
+      padding: 8px;
+    }
+  }
+  .partners{
+    .slick-arrow{
+      &.slick-prev{
+        right: auto;
+        left: 0;
+      }
+      &.slick-next{
+        left: auto;
+        right: 0;
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -70,10 +88,44 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .itemList{
+    &__section{
+      width: 50%;
+    }
+  }
+  .counter__sections-section {
+    display: block;
+    font-size: 22px;
+  }
 
-
+  .content{
+    &__left{
+      float: none;
+      width: 100%;
+      padding: 0;
+    }
+    &__right{
+      float: none;
+      width: 100%;
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-
+  .block-bg{
+    .btn{
+      padding: 9px 16px;
+      font-size: 12px;
+    }
+    &__title {
+      font-size: 17px;
+      line-height: 26px;
+      margin-bottom: 19px;
+    }
+  }
+  .itemList{
+    &__section{
+      width: 100%;
+    }
+  }
 }
