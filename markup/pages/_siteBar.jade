@@ -1,0 +1,145 @@
+extends main
+
+block head
+    - var headData = {title: "Главная"}
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+    .container
+        .label-list
+            .label-list__section
+                label.label-list__item
+                    input(type='radio', checked, name='sss').label-list__item-input
+                    span.label-list__item-element: span Все
+            .label-list__section
+                label.label-list__item
+                    input(type='radio', name='sss').label-list__item-input
+                    span.label-list__item-element: span Рестораны
+            .label-list__section
+                label.label-list__item
+                    input(type='radio', name='sss').label-list__item-input
+                    span.label-list__item-element: span Кафе
+            .label-list__section
+                label.label-list__item
+                    input(type='radio', name='sss').label-list__item-input
+                    span.label-list__item-element: span Бары
+            .label-list__section
+                label.label-list__item
+                    input(type='radio', name='sss').label-list__item-input
+                    span.label-list__item-element: span Магазины
+            .label-list__section
+                .form-search
+                    input(placeholder="ПОИСК").form-search__input.form-search__input_disabled
+                    button.form-search__btn: i.s-search
+
+
+        br
+        .content
+            .content__left
+                block siteBar
+
+            .content__right
+                if rightStyle && typeof(rightStyle) == 'object'
+                    if rightStyle.balans
+                        p.title-small: b ТЕКУЩИЙ БАЛАНС
+                        table
+                            thead
+                                tr
+                                    th Заведение
+                                    th Бонусы
+                            tbody
+                                -for(var i = 0; i<10; i++)
+                                    tr
+                                        td Название
+                                        td 700 руб
+
+                    if rightStyle.stock
+                        p.title-small: b РЕКОМЕНДУЕМ АКЦИИ
+                        .stock-min
+                            -for(var i = 0; i<2; i++)
+                                .stock-min__item
+                                    span.db.stock-min__item-title Lorem ipsum
+                                    span.db.stock-min__item-text dolor sit amet, consectetur adipiscing #[br] elit, sed do eiusmod tempor incididu #[br] ut labore et dolore magna aliqua.Ut #[br] enim ad minim veniam,
+                                    span.db.stock-min__item-date Действует до: 26.04.2017
+                        br
+                    if rightStyle.banner
+                        +img('content/banner')
+                        br
+                        br
+                    if rightStyle.instagram
+                        .instagram-widget.not-styleLink
+                            p.instagram-widget__title.color-black #[b.color-blue Вконтакте] / Facebook
+                            .instagram-widget__list
+                                .instagram-widget__list-photo
+                                    -for(var i = 0; i<8; i++)
+                                        .instagram-widget__list-photo-section
+                                            a(href="#").instagram-widget__list-photo-item: img(src='http://lorempixel.com/47/47/technics?i='+i)
+
+                            a(href="#").instagram-widget__link
+                                span.instagram-widget__link-section: +icon('vk', 'svg-vk', 16, 9)
+                                span.instagram-widget__link-section Подписаться на новости
+
+        if rightStyle && typeof(rightStyle) == 'object' && rightStyle.btn
+            br
+            br
+            br
+            .text-center
+                button.btn.btn-red.btn-border.btn-ttu(style="width: 145px;max-width: 100%;") ПОКАЗАТЬ ЕЩЁ
+
+
+        br
+        br
+        .partners
+            .partners__list
+                -for(var i = 0; i<9; i++)
+                    .partners__section: +img('content/partners/1')
+                    .partners__section: +img('content/partners/2')
+                    .partners__section: +img('content/partners/3')
+            br
+            br
+            .text-center
+                button.btn.btn-red.btn-border.btn-ttu(style="width: 145px;max-width: 100%;") посмотреть все
+        br
+        br
+
+
+
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

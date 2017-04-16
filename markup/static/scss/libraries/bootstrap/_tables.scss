@@ -30,36 +30,27 @@ th {
     > tr {
       > th,
       > td {
-        //@include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
-        //  padding: 13px 15px;
-        //}
-        //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-        //  padding: 5px 9px;
-        //}
-        padding: 20px 27px;
-        line-height: 24px;
+        padding: 6px 11px;
+        line-height: normal;
         vertical-align: middle;
         +*{
-          //border-left: 3px solid #fff;
+          border-left: 1px solid #eeeeee;
         }
       }
     }
   }
   // Bottom align for column headings
-  > tbody > tr > td {
-    //@include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
-    //  padding-top: 13px;
-    //  padding-bottom: 13px;
-    //}
-    //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-    //  padding-top: 5px;
-    //  padding-bottom: 5px;
-    //}
-    padding-top: 10px;
-    padding-bottom: 10px;
-    p{
-      &:last-child{
-        margin-bottom: 0;
+  > tbody > tr {
+    &:nth-of-type(2n){
+      background-color: #f8f8f8;
+    }
+    & > td {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      p{
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -68,12 +59,11 @@ th {
   }
   > thead > tr > th {
     //vertical-align: bottom;
-    //font-weight: 700;
-    background-color: #ef9c00;
-    font-weight: 400;
-    color: white;
+    background-color: #e3e3e3;
+    font-weight: 700;
+    color: black;
     line-height: 20px;
-    font-size: 16px;
+    font-size: 13px;
 
     //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
     //  font-size: 13px;

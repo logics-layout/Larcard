@@ -27,19 +27,17 @@ $(window).on({
 // $('#callback').modal('show')
 if ($.fn.slick) {
 
-//     $bottom__slider.slick({
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         dots: true,
-//         arrows: true,
-//         autoplay: true,
-//         autoplaySpeed: 4000,
-//         adaptiveHeight: true,
-//         appendDots: '.header-bottom__slider-dots',
-//         prevArrow: '.header-bottom__slider-arrows.previous',
-//         nextArrow: ".header-bottom__slider-arrows.next",
-//     }).on('afterChange', checkBg);
-//     checkBg();
+    $('.partners__list').slick({
+        slidesToShow: 9,
+        slidesToScroll: 9,
+        dots: false,
+        arrows: true,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
+        // adaptiveHeight: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+    });
 //
     $('.header__slider-el').slick({
         slidesToShow: 1,
@@ -74,8 +72,8 @@ if ($.fn.slick) {
 //         ]
 //         // autoplay: true,
 //         // autoplaySpeed: 3000,
-        // prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
-        // nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+//         prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+//         nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
 //     });
 //
 //     itemDetaliSliderPreview.slick({

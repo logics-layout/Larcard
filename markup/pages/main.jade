@@ -20,19 +20,12 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         section.page__wrapper
-            +header(index)
-            -if(!breadcrumb)
-                .container
-                    br
-                    br
-                    ul.breadcrumb.not-styleLink
-                        li: a(href="#"): span Главная
-                        li: span О компании
+            +header(headerData)
 
             //- Include your components here
-            //- start block content
+            // start block content
             block content
-            //- end block content
+            // end block content
 
 
             .page__buffer

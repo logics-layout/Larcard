@@ -5,12 +5,40 @@ body, html{
   min-width: 320px;
 }
 
-@include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
-
-}
+//@include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+//
+//}
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
-
+  .header{
+    &__nav{
+      position: relative;
+      &-list{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 2px solid #2d59ca;
+        padding: 12px 0;
+        ul{
+          display: block;
+          line-height: normal;
+          margin: 0;
+          li{
+            display: block;
+            +li{
+              border-top: 1px solid #ececec;
+            }
+            a{
+              padding: 10px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -26,7 +54,15 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
-
+  .header__nav{
+    &-list{
+      display: block !important;
+      .container{
+        padding: 0;
+        width: auto;
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
@@ -34,6 +70,7 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+
 
 }
 

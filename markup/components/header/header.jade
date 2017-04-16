@@ -1,22 +1,50 @@
-mixin header(data)
-    .header(class!=data).not-styleLink
+mixin header(headerData)
+    - var style = false
+
+    if typeof(headerData) == 'object'
+        - style = headerData.style
+
+    .header.not-styleLink
         .header__nav
             .container
                 .header__nav-table
-                    .header__nav-table-cell.header__nav-table-cell_logo
+                    .header__nav-table-cell.header__nav-table-cell_toggleNav.hidden-lg-up
+                        .mobile-list-anim
+                            input(type="checkbox", id="header-bottom-toggleMenuMbl")
+                            label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                                span.menu-mobile
+                                    span.menu-mobile-hamburger.one
+                                    span.menu-mobile-hamburger.two
+                                    span.menu-mobile-hamburger.three
+                    .header__nav-table-cell.header__nav-table-cell_logo.hidden-md-down
                        a(href="#").header__nav-logo: +img('general/logo', 'svg')
                     .header__nav-table-cell
                         .header__nav-list
-                            ul
-                                li: a(href="#").color-black: span.color-black__title ГЛАВНАЯ
-                                li.active: a(href="#") МЕСТА
-                                li: a(href="#").color-black: span.color-black__title ДОСТАВКА
-                                li: a(href="#").color-black: span.color-black__title ПОЛУЧИТЬ КАРТУ
+                            .container
+                                ul
+                                    li: a(href="#").color-black: span.color-black__title ГЛАВНАЯ
+                                    li.active: a(href="#") МЕСТА
+                                    li: a(href="#").color-black: span.color-black__title ДОСТАВКА
+                                    li: a(href="#").color-black: span.color-black__title ПОЛУЧИТЬ КАРТУ
 
                     .header__nav-table-cell.text-right
-                        a(href="#"): span.btn.btn-red.btn-border Регистрация
-                        |&nbsp;&nbsp;&nbsp;
-                        a(href="#"): span(style="width: 99px;").btn.btn-blue Войти
+                        if style == 'user'
+                            .header__profile
+                                .header__profile-table
+                                    .header__profile-table-cell
+                                        .header__profile-ava: +img('/assets/header/ava', 'png')
+                                    .header__profile-table-cell
+                                        .header__profile-title Иванов Пётр Петрович
+                                        .header__profile-num №54321
+                                        .header__profile-links
+                                            a(href="#").header__profile-links-link.color-black: span.color-black__title.color-black__title_viewBorder Личный кабинет
+                                            a(href="#").header__profile-links-link.color-black: span.color-black__title.color-black__title_viewBorder Выход
+
+
+                        else
+                            a(href="#"): span.btn.btn-red.btn-border Регистрация
+                            |&nbsp;&nbsp;&nbsp;
+                            a(href="#"): span(style="width: 99px;").btn.btn-blue Войти
 
 
 

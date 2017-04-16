@@ -3,6 +3,10 @@
 html, body {
   height: 100%;
   background-color: #f1f1f1;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .container{
@@ -32,3 +36,145 @@ body {
 }
 
 
+.title-small{
+  font-size: 13px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.content{
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &__left{
+    float: left;
+    width: 77%;
+    padding-right: 20px;
+  }
+  &__right{
+    float: right;
+    width: 23%;
+  }
+}
+
+.stock-min{
+  &__item{
+    color: #666;
+    font-weight: 300;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 9px 17px;
+    padding-bottom: 13px;
+    +.stock-min__item{
+      margin-top: 10px;
+    }
+    &-title{
+      color: #363636;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+    &-text{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+    &-date{
+    }
+  }
+}
+
+.instagram-widget{
+  &__title{
+    margin-bottom: 13px;
+    font-size: 13px;
+  }
+  &__list{
+    display: block;
+    margin-bottom: 11px;
+    &-photo{
+      font-size: 0;
+      margin: -4.5px;
+      &-section{
+        display: inline-block;
+        vertical-align: top;
+        padding: 4.5px;
+        width: 25%;
+      }
+      &-item{
+        display: block;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+  &__link{
+    display: table;
+    width: 100%;
+    color: #fff;
+    fill: currentColor;
+    background-color: #2d59ca;
+    font-size: 13px;
+    padding: 4px 0;
+    @include tr;
+    &-section{
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 8px;
+      +*{
+        border-left: 1px solid;
+      }
+    }
+    &:hover{
+      background-color: #2850b2;
+    }
+  }
+}
+
+.partners{
+  &__list{
+    margin: 0 -15px;
+  }
+  &__section{
+    outline: none;
+    padding: 0 15px;
+    img{
+      width: 100%;
+    }
+  }
+  .slick-arrow{
+    @include btn-clear;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ececec;
+    background-color: #fff;
+    z-index: 2;
+    margin-top: -12.5px;
+    i{
+      margin-top: -2px;
+    }
+    &:hover{
+      background-color: #2d59ca;
+      border-color: #2d59ca;
+      .s-arrow-prev{
+        @include bg($arrow-prev-hover);
+      }
+      .s-arrow-next{
+        @include bg($arrow-next-hover);
+      }
+    }
+    &.slick-prev{
+      right: 100%;
+    }
+    &.slick-next{
+      left: 100%;
+    }
+  }
+}

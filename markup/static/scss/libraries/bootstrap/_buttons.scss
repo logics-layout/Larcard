@@ -30,6 +30,7 @@
 
   &.btn-ttu{
     text-transform: uppercase;
+    font-size: 11px;
   }
   &.btn-width{
     width: 100%;
@@ -161,11 +162,10 @@ a.btn {
   padding: 24px 60px;
   max-width: 100%;
 }
-//.btn-sm {
-//  font-size: 12px;
-//  padding-top: 5.5px;
-//  padding-bottom: 5.5px;
-//}
+.btn-sm {
+  font-size: 11px;
+  padding: 5.5px 10.4px;
+}
 //.btn-xl {
 //  font-size: 15px;
 //  padding-top: 16px;

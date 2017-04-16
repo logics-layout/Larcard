@@ -1,6 +1,31 @@
 mixin footer(data)
     footer.footer.not-styleLink
         .container
+            .row
+                .col-md-4.col-sm-6.col-xs-6
+                    .dib.text-center
+                        a(href="#").footer__logo: +icon('logo', 'svg-logo', 80, 49)
+                        ul.footer__network
+                            li: a(href="#"): i.s-vk
+                            li: a(href="#"): i.s-fs
+
+                .col-sm-4.hidden-sm-down
+                    .footer__blockCenter
+                        .footer__text
+                            p Техническая поддержка
+                            p #[a(href="#").color-white: span.color-white__title.color-white__title_viewBorder Политика кофидициальности] #[br] Все права защищены
+                .col-md-4.col-sm-6.col-xs-6
+                    .footer__blockRight
+                        .footer__copyright.dib
+                            .footer__copyright-img: +img('assets/footer/logo-copyright', 'svg')
+                            .footer__copyright-title Powered by eCRM AKRK
+
+            .hidden-md-up
+                br.hidden-sm-up
+                .footer__blockCenter
+                    .footer__text
+                        p Техническая поддержка
+                        p #[a(href="#").color-white: span.color-white__title.color-white__title_viewBorder Политика кофидициальности] #[br] Все права защищены
 
 
 
