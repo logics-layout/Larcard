@@ -225,6 +225,7 @@ if ($.fn.magnificPopup) {
 
 var search__input = $('.form-search__input');
 function checkSearcFormActive() {
+    if(!search__input[0]) return false;
     if(search__input.val().length>0){
         search__input.addClass('focus')
     }else{

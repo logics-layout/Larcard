@@ -64,7 +64,11 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, sm)) {
-
+  .col-btn{
+    &__cell{
+      width: 50%;
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, md)) {
@@ -72,6 +76,9 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .form-control_big{
+    font-size: 18px;
+  }
   .header__nav{
     &-list{
       display: block !important;
@@ -112,6 +119,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .auth-sign {
+    &__item {
+      font-size: 14px;
+      &-title{
+        padding-left: 15px;
+      }
+    }
+  }
+
   .block-bg{
     .btn{
       padding: 9px 16px;

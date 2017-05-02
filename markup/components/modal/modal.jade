@@ -41,7 +41,7 @@ mixin modal()
                         textarea.form-control(placeholder="Ваш комментарий", rows='5')
                     button.btn.btn-blue.btn-border.btn-notBg(style="width: 270px;max-width: 100%;") Войти
 
-    #auth-phone(class="modal fade").modal-show
+    #auth-phone(class="modal fade")
         .modal-dialog.modal-sm
             .modal-content
                 button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
@@ -56,6 +56,70 @@ mixin modal()
                     .form-group
                         input.form-control(placeholder="Введите номер телефона")
                     button.btn.btn-red.btn-width.ttu.btn-textNormal отправить смс для авторизации
+
+
+
+    #psd-101(class="modal fade")
+        .modal-dialog.modal-sm
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    .text-center
+
+                        p.modal-title.modal-title_big
+                            i.s-man-user
+                            br
+                            b Вход по логину
+                    br
+                    .form-group
+                        input.form-control.form-control_big(placeholder="Введите логин")
+                    .form-group
+                        input.form-control.form-control_big(placeholder="Введите пароль")
+                    br
+                    button.btn.btn-red.btn-width.ttu.btn-textNormal войти
+
+    #psd-24(class="modal fade")
+        .modal-dialog.modal-md(style='width: 588px;margin: inherit auto;max-width: 100%;')
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+
+                    p.modal-title.modal-title_magrinSmall.ttu: b войдите в систему
+
+                    p На нашем сайте оставить отзыв могут только зарегистрированные пользователи.
+                    p Войдите в систему или зарегистрируйтесь.
+                    br
+                    .col-btn
+                        .col-btn__cell
+                            button.btn.btn-blue.btn-border.btn-notBg.btn-width Войти
+                        .col-btn__cell
+                            button.btn.btn-red.btn-border.btn-notBg.btn-width Зарегистрироваться
+
+    #psd-100(class="modal fade").modal-show
+        .modal-dialog.modal-sm
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    br
+                    br
+                    br
+
+                    .auth-sign.not-styleLink
+                        a(href="#").auth-sign__item
+                            .auth-sign__item-icon: i.s-auth-sign-1
+                            .auth-sign__item-title Войти по логину
+                        a(href="#").auth-sign__item
+                            .auth-sign__item-icon: i.s-auth-sign-2
+                            .auth-sign__item-title Войти по номеру телефона
+                        a(href="#").auth-sign__item
+                            .auth-sign__item-icon: i.s-auth-sign-3
+                            .auth-sign__item-title Войти через Вконтакте
+                        a(href="#").auth-sign__item
+                            .auth-sign__item-icon: i.s-auth-sign-4
+                            .auth-sign__item-title Войти через Facebook
+
+
+                    button.btn.btn-red.btn-border.btn-notBg.btn-width.ttu Зарегистрировать карту
 
 
 

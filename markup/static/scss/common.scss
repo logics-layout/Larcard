@@ -221,3 +221,43 @@ body {
     }
   }
 }
+
+.col-btn{
+  font-size: 0;
+  margin: -4px;
+  &__cell{
+    display: inline-block;
+    padding: 4px;
+    width: 100%;
+  }
+}
+
+.auth-sign{
+  margin-bottom: 29px;
+  &__item{
+    display: table;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    +*.auth-sign__item{
+      margin-top: 10px;
+    }
+    >*{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    &-icon{
+      width: 45px;
+    }
+    &-title{
+      background-color: #2d59ca;
+      padding-left: 22px;
+      padding-right: 15px;
+    }
+    &:hover{
+      .auth-sign__item-title{
+        background-color: #2a52ae;
+      }
+    }
+  }
+}
