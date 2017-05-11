@@ -95,7 +95,7 @@ mixin modal()
                         .col-btn__cell
                             button.btn.btn-red.btn-border.btn-notBg.btn-width Зарегистрироваться
 
-    #psd-100(class="modal fade").modal-show
+    #psd-100(class="modal fade")
         .modal-dialog.modal-sm
             .modal-content
                 button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
@@ -120,6 +120,203 @@ mixin modal()
 
 
                     button.btn.btn-red.btn-border.btn-notBg.btn-width.ttu Зарегистрировать карту
+
+    #psd-24(class="modal fade")
+        .modal-dialog.modal-md(style='width: 588px;margin: inherit auto;max-width: 100%;')
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+
+                    p.modal-title.modal-title_magrinBig.ttu: b Специально для вас
+                    +img('content/popup-img')
+                    br
+                    br
+                    p.modal-title.modal-title_magrinSmall.ttu Sed ut perspiciatis unde omnis
+                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo invento veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ips voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu ntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, quia non numquam eius modi tempora incidunt ut labore et dolore magnam iquam quaerat voluptatem.
+                    br
+                    .col-btn
+                        .col-btn__cell
+                            button.btn.btn-blue.btn-border.btn-notBg.btn-width Поделиться в соц. сетях
+                        .col-btn__cell
+                            button.btn.btn-red.btn-border.btn-notBg.btn-width Отправить мне на почту
+
+
+
+    #psd-104(class="modal fade")
+        .modal-dialog.modal-md
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    label.style-radio
+                        input(type='radio' name='ss', checked).style-radio__input
+                        span.style-radio__table
+                            span.style-radio__table-cell.style-radio__table-cell_el
+                                span.style-radio__el
+                            span.style-radio__table-cell
+                                span.style-radio__title Зарегистрировать новую карту
+                    br
+                    label.style-radio
+                        input(type='radio' name='ss').style-radio__input
+                        span.style-radio__table
+                            span.style-radio__table-cell.style-radio__table-cell_el
+                                span.style-radio__el
+                            span.style-radio__table-cell
+                                span.style-radio__title У меня есть пластиковая карта
+                    br
+                    br
+
+                    .row
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Ваше имя", value="Пётр")
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Фамилия")
+                    .row
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Ваш телефон")
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Ваш e-mail")
+
+                    br
+                    .form-group
+                        input.form-control(placeholder="Дата рождения", style='width: 154px;')
+                        |&nbsp;&nbsp;&nbsp;&nbsp;
+                        span.text-big.MuseoSansCyrl Пол:
+                        |&nbsp;&nbsp;
+                        label.style-radio
+                            input(type='radio' name='mm', checked).style-radio__input
+                            span.style-radio__table.style-radio__table_smallMargin
+                                span.style-radio__table-cell.style-radio__table-cell_el
+                                    span.style-radio__el
+                                span.style-radio__table-cell
+                                    span.style-radio__title М
+                        |&nbsp;&nbsp;
+                        label.style-radio.style-radio__table_smallMargin
+                            input(type='radio' name='mm').style-radio__input
+                            span.style-radio__table
+                                span.style-radio__table-cell.style-radio__table-cell_el
+                                    span.style-radio__el
+                                span.style-radio__table-cell
+                                    span.style-radio__title Ж
+                    br
+                    .row.MuseoSansCyrl
+                        .col-md-6
+                            .form-group
+                                label.text-big Район проживания
+                                select
+                                    option Выбрать
+                                    option item 1
+                                    option item 2
+                                    option item 3
+                                    option item 4
+                        .col-md-6
+                            .form-group
+                                label.text-big Район работы
+                                select
+                                    option Выбрать
+                                    option item 1
+                                    option item 2
+                                    option item 3
+                                    option item 4
+
+                    br
+                    label.style-radio.not-styleLink
+                        input(type='radio', name='aaaaa', checked).style-radio__input
+                        span.style-radio__table
+                            span.style-radio__table-cell.style-radio__table-cell_el
+                                span.style-radio__el
+                            span.style-radio__table-cell
+                                span.style-radio__title Я принимаю условия #[a(href="#").color-black: span.color-black__title.color-black__title_viewBorder пользовательского соглашения]
+                    br
+                    br
+                    button(style="width: 321px;max-width: 100%;font-weight: 400;").btn-modal.openSans.btn.btn-red.ttu Зарегистрировать
+
+    #psd-105(class="modal fade").modal-show
+        .modal-dialog.modal-md
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    label.style-radio
+                        input(type='radio' name='ss', checked).style-radio__input
+                        span.style-radio__table
+                            span.style-radio__table-cell.style-radio__table-cell_el
+                                span.style-radio__el
+                            span.style-radio__table-cell
+                                span.style-radio__title Зарегистрировать новую карту
+                    br
+                    label.style-radio
+                        input(type='radio' name='ss').style-radio__input
+                        span.style-radio__table
+                            span.style-radio__table-cell.style-radio__table-cell_el
+                                span.style-radio__el
+                            span.style-radio__table-cell
+                                span.style-radio__title У меня есть пластиковая карта
+                    br
+                    br
+
+                    .row
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Введите номер карты")
+
+                    .row
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Ваше имя", value="Пётр")
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Фамилия")
+                    .row
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Ваш телефон")
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Ваш e-mail")
+                    .row
+                        .col-sm-6
+                            .form-group
+                                input.form-control(placeholder="Дата рождения")
+
+                    br
+
+                    br
+                    .row.MuseoSansCyrl
+                        .col-md-6
+                            .form-group
+                                label.text-big Район проживания
+                                select
+                                    option Выбрать
+                                    option item 1
+                                    option item 2
+                                    option item 3
+                                    option item 4
+                        .col-md-6
+                            .form-group
+                                label.text-big Район работы
+                                select
+                                    option Выбрать
+                                    option item 1
+                                    option item 2
+                                    option item 3
+                                    option item 4
+
+                    br
+                    label.style-radio.not-styleLink
+                        input(type='radio', name='aaaaa', checked).style-radio__input
+                        span.style-radio__table
+                            span.style-radio__table-cell.style-radio__table-cell_el
+                                span.style-radio__el
+                            span.style-radio__table-cell
+                                span.style-radio__title Я принимаю условия #[a(href="#").color-black: span.color-black__title.color-black__title_viewBorder пользовательского соглашения]
+                    br
+                    br
+                    button(style="width: 321px;max-width: 100%;font-weight: 400;").btn-modal.openSans.btn.btn-red.ttu Зарегистрировать
+
+
 
 
 

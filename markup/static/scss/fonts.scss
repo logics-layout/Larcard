@@ -63,3 +63,8 @@
   font-weight: 800;
 };
 
+@include font-face("Museo Sans Cyrl", "../fonts/museosanscyrl/Museosanscyrl500", $file-formats: woff woff2 ttf){
+  font-style: normal;
+  font-weight: 500;
+};
+

@@ -72,7 +72,9 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, md)) {
-
+  .text-big{
+    font-size: 18px;
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
@@ -95,6 +97,35 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .style-radio {
+    font-size: 14px;
+    &__table {
+      &-cell {
+        &_el {
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+  .form-control {
+    font-size: 14px;
+  }
+  .bootstrap-select.btn-group {
+    .dropdown-toggle {
+      height: 37px;
+      line-height: 43px;
+      .filter-option {
+        font-size: 14px;
+      }
+    }
+    .bs-caret{
+      height: 37px;
+      width: 37px;
+      .caret{
+        @include triangle('right', #fff, 6px, 12px);
+      }
+    }
+  }
   .itemList{
     &__section{
       width: 50%;
