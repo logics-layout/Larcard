@@ -1,6 +1,26 @@
 $(document).on('click', '[href="#"]', function(e) {
     return e.preventDefault();
 });
+
+var IScrollFn = function () {
+    if (typeof IScroll !== "undefined" && IScroll !== null){
+        $('.IScroll').each(function () {
+            var visible = $(this).find('.iScrollIndicator:visible');
+            new IScroll(this, {
+                scrollbars: true,
+                mouseWheel: true,
+                interactiveScrollbars: true,
+                shrinkScrollbars: 'scale',
+                fadeScrollbars: true,
+                preventDefault: false
+            });
+            if(visible[0]){
+                visible.parent().siblings('.iScrollLoneScrollbar').remove();
+            }
+        });
+    }
+};
+
 // var linkTop = $('.footer__scrollTop');
 // linkTop.click(function () {
 //     $('html, body').animate({ scrollTop: 0 }, 500);
@@ -8,6 +28,7 @@ $(document).on('click', '[href="#"]', function(e) {
 $(window).on({
     load: function () {
         checkFooterHeight();
+        IScrollFn();
         // checkHeaderFix();
     },
     scroll: function () {
@@ -237,3 +258,22 @@ search__input.on('input', checkSearcFormActive);
 checkSearcFormActive();
 
 $('.modal-show').modal('show');
+
+var modalToggleCheckbox = $('.list-modal-toggle-checkbox').find('input');
+modalToggleCheckbox.change(function(e){
+    var _this = $(this),
+        checkedEl = modalToggleCheckbox.filter(':checked');
+        fn = checkedEl.data('toggle-fn');
+
+    $('.list-modal-toggle-checkbox__elementsHidden')[fn]('active');
+});
+
+$('.akardion__item-title').click(function () {
+    var _this = $(this),
+        parent = _this.parent();
+
+
+    parent.toggleClass('active').find('.akardion__item-text').slideToggle(300);
+    parent.siblings().removeClass('active open').find('.akardion__item-text').slideUp(300)
+
+});

@@ -11,13 +11,18 @@ mixin viewFilter(tagsList)
     if tagsList && typeof(tagsList) == 'object'
         .label-list
             if tagsList.list
+                - var minElClass = '';
+                if tagsList.minEl
+                    - minElClass = 'label-list__item_min';
+
+
                 each tag, key in tagsList.list
                     - var checked = false
                     if key == 0
                         - checked = true
 
                     .label-list__section
-                        label.label-list__item
+                        label.label-list__item(class!=minElClass)
                             input(type='radio', checked=checked, name='sss').label-list__item-input
                             span.label-list__item-element: span= tag
             if tagsList.search

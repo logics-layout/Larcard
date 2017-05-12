@@ -1,0 +1,100 @@
+extends _siteBar
+
+block head
+    - var headData = {title: "14.psd"}
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+    - var rightStyle = {phone: true, title: "<b><span class='ttu'>Техническая поддержка</span> <br> Справка, или часто задоваемые вопросы</b>"}
+
+block siteBar
+    
+    .akardion.not-styleLink
+        .akardion__item
+            a(href="#").akardion__item-title Мне не пришла смс с кодом, что делать?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item
+            a(href="#").akardion__item-title Я купил Ларь-карту, зарегистрировал, а приветственные бонусы не поступили.
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item
+            a(href="#").akardion__item-title Можно ли при регистрации Ларь-карты указывать городской номер?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item
+            a(href="#").akardion__item-title Можно ли бонусы, накопленные в одном заведении, потратить в другом?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item
+            a(href="#").akardion__item-title У меня изменился номер телефона, можно ли его изменить в личном кабинете?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item
+            a(href="#").akardion__item-title Я получил Ларь-карту в кафе Одесса-мама. Где еще я могу ее использовать?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item
+            a(href="#").akardion__item-title Недавно мне пришло смс, в котором говориться, что одно из заведений зачислило по акции бонусы с ограниченным сроком действия. Как ими воспользоваться?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+        .akardion__item.active.open
+            a(href="#").akardion__item-title Мне не пришла смс с кодом, что делать?
+            .akardion__item-text В.руб. – виртуальные рубли. Это значит, что данные бонусы Вы можете использовать только в том заведении, где Вы их получили. Виртуальные рубли нельзя обналичивать.
+
+    br
+    br
+    span.color-black: b #[span.ttu(style='margin-bottom: 2px;display: block;') ​Если нет интернета] Бывают случаи когда нет возможности воспользоваться личным кабинетом для просмотра баланса бонусного счета по заведениям. Для таких случаев мы ввели функцию смс-запроса.
+    .banner-desc-table
+        .banner-desc-table__cell
+            .banner-desc
+                span.banner-desc__title.ttu узнать баланс
+                .banner-desc__table
+                    .banner-desc__table-cell: +icon('envelope')
+                    .banner-desc__table-cell На номер #[b 2420] #[br] текст: #[b ЛК] или #[b LK] пробел название заведения.
+        .banner-desc-table__cell.banner-desc-table__cell_retreat
+        .banner-desc-table__cell
+            .banner-desc
+                span.banner-desc__title.ttu состояние активации
+                .banner-desc__table
+                    .banner-desc__table-cell: +icon('envelope')
+                    .banner-desc__table-cell На номер #[b 2420] #[br] текст: #[b ЛК] или #[b LK] пробел NNNNNNN #[br] (семизначный номер Ларь-карты)
+    p.color-black.text-small Обязательно отправляйте смс-запрос с мобильного телефона, на который зарегистрирована Ларь-карта! #[br] #[b * Стоимость смс-запроса - 1 руб.70 коп.]
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

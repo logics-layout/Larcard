@@ -13,7 +13,7 @@
 a{
   //color: #e74700;
   //text-decoration: underline;
-  color: #ef9c00;
+  color: #2d59ca;
   cursor: pointer;
   text-decoration: none;
   &:focus {
@@ -23,7 +23,7 @@ a{
     text-decoration: none;
   }
   &:not(.not-styleLink){
-    @include link-border-color(#ef9c00);
+    @include link-border-color(#2d59ca);
   }
   .not-styleLink{
     text-decoration: underline;
@@ -47,6 +47,10 @@ a{
     position: relative;
     bottom: -2px;
   }
+}
+
+.text-small{
+  font-size: 12px;
 }
 
 h1, .h1{
@@ -419,6 +423,18 @@ table{
       padding: 6px 15px;
     }
   }
+  &__link-item{
+    display: block;
+    font-size: 13px;
+    >span{
+      border: 1px solid #2d59ca;
+      color: #2d59ca;
+      font-weight: 400;
+      line-height: normal;
+      padding: 4px 15px;
+      display: block;
+    }
+  }
 }
 
 .form-search{
@@ -476,9 +492,12 @@ table{
   color: black;
   font-family: "Museo Sans Cyrl", sans-serif;
   font-size: 18px;
-  margin: 0;
   display: inline-block;
   vertical-align: middle;
+  margin: 0;
+  &_textSmall{
+    font-size: 16px;
+  }
   &__el{
     width: 14px;
     height: 14px;
@@ -533,6 +552,51 @@ table{
           padding-left: 2px;
         }
       }
+    }
+  }
+}
+
+.count-block{
+  white-space: nowrap;
+  font-size: 0;
+  >*{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+  }
+  &__btn{
+    @include btn-clear;
+    color: #fc145c;
+    font-weight: 700;
+    height: 31px;
+    padding: 0 8px;
+    &:hover{
+      color: rgb(219, 20, 84);
+    }
+  }
+  &__input{
+    width: 75px;
+    height: 31px;
+    border: 1px solid #aaa;
+    outline: none;
+  }
+}
+
+.IScroll{
+  position: relative;
+  overflow: hidden;
+  margin-right: -8px;
+  padding-right: 8px;
+  .iScrollLoneScrollbar{
+    width: 8px !important;
+    //opacity: 1 !important;
+    background-color: rgba(0, 0, 0, 0.19);
+    border-radius: 0;
+    .iScrollIndicator{
+      width: 8px !important;
+      background-color: #949494 !important;
+      border-radius: 0 !important;
+      border: 2px solid rgba(0, 0, 0, 0.06) !important;
     }
   }
 }

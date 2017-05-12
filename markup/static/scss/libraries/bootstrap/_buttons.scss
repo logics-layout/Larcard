@@ -164,6 +164,9 @@ a.btn {
   font-weight: 700;
   padding: 24px 60px;
   max-width: 100%;
+  &_paddingMin{
+    padding: 10.5px 31px;
+  }
 }
 .btn-sm {
   font-size: 11px;

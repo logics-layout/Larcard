@@ -197,6 +197,11 @@ output {
 
   // [converter] extracted textarea& to textarea.form-control
 
+  &_min{
+    padding: 5.5px 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 // Reset height for `textarea`s
@@ -262,7 +267,7 @@ input[type="search"] {
   position: relative;
 
   &.two{
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
   &.required{
     &:after{

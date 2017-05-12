@@ -1,0 +1,86 @@
+extends main
+
+block head
+    - var headData = {title: "Главная"}
+    - var breadcrumb = true
+    - var headerData = { style: 'user'}
+
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+    .desc-card.text-center
+        .container
+            p.desc-card__title Карта Like бывает в двух форматах: мобильная и пластиковая
+            p.desc-card__text Оба формата равнозначны. К мобильной карте всегда можно привязать пластиковую, #[br.hidden-sm-down] Если есть пластиковая, легко скачать и мобильную
+
+
+    .registration-block.text-center
+        p.registration-block__title Регистрация мобильной карты
+        p.registration-block__text.ttu Зарегистрируйтесь и с удобством пользуйтесь универсальной бонусной #[br] картой припомощи своего смартфона
+        p.registration-block__text.ttu: b зарегистрировать мобильную карту прямо сейчас
+        button.btn.btn-blue.ttu.btn-lg_paddingMin.btn-lg Регистрация
+        br
+        br
+        br
+        p.registration-block__text.registration-block__text_big: b Или зарегистрируйтесь по телефону, позвонив в call-центр: 8 (800) 700-56-78
+
+
+    .registration-block.registration-block_card.text-center
+        p.registration-block__title Регистрация пластиковой карты
+        p.registration-block__text #[span.ttu Пластиковую карту можно получить в любом заведении нашей сети] #[br] #[a(href="#").registration-block__text_big Посмотреть список всех заведений]
+
+        ul.registration-block__list
+            li.registration-block__list-item
+                p.registration-block__list-item-icon: +icon('woman')
+                p.registration-block__list-item-title Скажите любому сотруднику заведения, что Вы хотите получить карту.
+            li.registration-block__list-item
+                p.registration-block__list-item-icon: +icon('forms')
+                p.registration-block__list-item-title Скажите любому сотруднику заведения, что Вы хотите получить карту.
+            li.registration-block__list-item
+                p.registration-block__list-item-icon: +icon('medal')
+                p.registration-block__list-item-title Скажите любому сотруднику заведения, что Вы хотите получить карту.
+        br
+        br
+
+        p.registration-block__text.ttu: b зарегистрировать мобильную карту прямо сейчас
+        button.btn.btn-red.ttu.btn-lg_paddingMin.btn-lg.btn-border Регистрация
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

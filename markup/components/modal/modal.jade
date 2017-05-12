@@ -234,7 +234,7 @@ mixin modal()
                     br
                     button(style="width: 321px;max-width: 100%;font-weight: 400;").btn-modal.openSans.btn.btn-red.ttu Зарегистрировать
 
-    #psd-105(class="modal fade").modal-show
+    #psd-105(class="modal fade")
         .modal-dialog.modal-md
             .modal-content
                 button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
@@ -315,6 +315,163 @@ mixin modal()
                     br
                     br
                     button(style="width: 321px;max-width: 100%;font-weight: 400;").btn-modal.openSans.btn.btn-red.ttu Зарегистрировать
+
+    #psd-19(class="modal fade")
+        .modal-dialog.modal-md-min
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    p.modal-title.modal-title_magrinSmall.ttu Оформление заказа
+                    p(style="margin-bottom:22px;") Минимальная сумма оплаты наличными 400 руб.
+
+                    .IScroll.list-basketBlock
+                        div
+                            .list-basket
+                                -for(var i=1;i<10;i++)
+                                    .list-basket__item
+                                        .list-basket__item-title Бизнес ланч (полный)
+                                        .list-basket__item-count
+                                            .count-block
+                                                button.count-block__btn.count-block__btn_minus -
+                                                input.count-block__input(value=i+" шт").text-center
+                                                button.count-block__btn.count-block__btn_plus +
+                                        .list-basket__item-price 370 руб.
+                                        div: button.list-basket__item-clear: +icon('clear', 'svg-clear', 10, 10)
+                    br
+
+                    .text-right
+                        div.dib
+                            .modal-table-text.text-left
+                                .modal-table-text_row
+                                    .modal-table-text_cell.text-right: span.ttu Общая сумма заказа:
+                                    .modal-table-text_cell: b.color-blue 580 руб.
+                                .modal-table-text_row
+                                    .modal-table-text_cell.text-right Доступно like бонусов:
+                                    .modal-table-text_cell: b.color-blue 180
+                                .modal-table-text_row
+                                    .modal-table-text_cell
+                                    .modal-table-text_cell
+                                .modal-table-text_row
+                                    .modal-table-text_cell.text-right.list-modal-toggle-checkbox
+                                        label.style-radio.style-radio_textSmall
+                                            input(type='radio' name='mm', checked, data-toggle-fn="removeClass").style-radio__input
+                                            span.style-radio__table.style-radio__table_smallMargin
+                                                span.style-radio__table-cell.style-radio__table-cell_el
+                                                    span.style-radio__el
+                                                |&nbsp;
+                                                span.style-radio__table-cell
+                                                    span.style-radio__title Коплю
+                                        | &nbsp;&nbsp;
+                                        label.style-radio.style-radio_textSmall.style-radio__table_smallMargin
+                                            input(type='radio' name='mm', data-toggle-fn="addClass").style-radio__input
+                                            span.style-radio__table
+                                                span.style-radio__table-cell.style-radio__table-cell_el
+                                                    span.style-radio__el
+                                                |&nbsp;
+                                                span.style-radio__table-cell
+                                                    span.style-radio__title Трачу
+                                    .modal-table-text_cell
+
+                                .modal-table-text_row.list-modal-toggle-checkbox__elementsHidden
+                                    .modal-table-text_cell.text-right Списать like бонусов
+                                    .modal-table-text_cell: input.form-control.form-control_min(value="180", style="width: 84px;")
+
+                                .modal-table-text_row.list-modal-toggle-checkbox__elementsHidden
+                                    .modal-table-text_cell
+                                    .modal-table-text_cell
+
+                                .modal-table-text_row.list-modal-toggle-checkbox__elementsHidden
+                                    .modal-table-text_cell.text-right: span.ttu Итого к оплате:
+                                    .modal-table-text_cell: b.color-blue 400 руб.
+
+
+
+
+
+                    br
+                    p.modal-title.modal-title_magrinSmall.modal-title_small.ttu ВВЕДИТЕ ВАШИ ДАННЫЕ
+                    .modal-table-input
+                        .modal-table-input__cell
+                            .form-group.two
+                                input.form-control.form-control_min(placeholder="Имя")
+                        .modal-table-input__cell
+                            .form-group.two
+                                input.form-control.form-control_min(placeholder="Фамилия")
+                        .modal-table-input__cell
+                            .form-group.two
+                                input.form-control.form-control_min(placeholder="Номер телефона")
+                    .form-group.two
+                        input.form-control.form-control_min(placeholder="Адрес доставки")
+                    .form-group.two
+                        textarea.form-control.form-control_min(placeholder="Комментарий к заказу", rows='3')
+
+
+
+                    button(style="width: 321px;max-width: 100%;font-weight: 400;").btn-modal.openSans.btn.btn-red Оформить заказe
+
+
+    //#psd-21(class="modal fade").modal-show
+    #psd-21(class="modal fade")
+        .modal-dialog.modal-md-min
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body
+                    p.modal-title.modal-title_magrinSmall.ttu Оформление заказа
+                    p(style="margin-bottom:22px;") Минимальная сумма оплаты наличными 400 руб.
+
+                    .IScroll.list-basketBlock
+                        div
+                            .list-basket
+                                -for(var i=1;i<10;i++)
+                                    .list-basket__item
+                                        .list-basket__item-title Бизнес ланч (полный)
+                                        .list-basket__item-count
+                                            .count-block
+                                                button.count-block__btn.count-block__btn_minus -
+                                                input.count-block__input(value=i+" шт").text-center
+                                                button.count-block__btn.count-block__btn_plus +
+                                        .list-basket__item-price 370 руб.
+                                        div: button.list-basket__item-clear: +icon('clear', 'svg-clear', 10, 10)
+                    br
+
+                    .text-right
+                        div.dib
+                            .modal-table-text.text-left
+                                .modal-table-text_row
+                                    .modal-table-text_cell.text-right: span.ttu Общая сумма заказа:
+                                    .modal-table-text_cell: b.color-blue 580 руб.
+
+                    br
+                    br
+                    p.modal-title.modal-title_magrinSmall.ttu зарегистрируйтесь
+                    p(style="margin-bottom: 20px;") И вы сможите накапливать и использовать бонусные баллы #[br.hidden-sm-down] в более чем 300 заведений Калининграда с помощью #[br.hidden-sm-down] универсальной карты Like!
+                    .col-btn
+                        .col-btn__cell
+                            button.btn.btn-blue.btn-border.btn-notBg.btn-width Войти
+                        .col-btn__cell
+                            button.btn.btn-red.btn-border.btn-notBg.btn-width Зарегистрироваться
+
+                    br
+                    br
+                    p.modal-title.modal-title_magrinSmall.modal-title_small.ttu ВВЕДИТЕ ВАШИ ДАННЫЕ
+                    .modal-table-input
+                        .modal-table-input__cell
+                            .form-group.two
+                                input.form-control.form-control_min(placeholder="Имя")
+                        .modal-table-input__cell
+                            .form-group.two
+                                input.form-control.form-control_min(placeholder="Фамилия")
+                        .modal-table-input__cell
+                            .form-group.two
+                                input.form-control.form-control_min(placeholder="Номер телефона")
+                    .form-group.two
+                        input.form-control.form-control_min(placeholder="Адрес доставки")
+                    .form-group.two
+                        textarea.form-control.form-control_min(placeholder="Комментарий к заказу", rows='3')
+
+
+
+                    button(style="width: 321px;max-width: 100%;font-weight: 400;").btn-modal.openSans.btn.btn-red Оформить заказe
 
 
 

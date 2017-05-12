@@ -261,3 +261,358 @@ body {
     }
   }
 }
+
+.list-basketBlock{
+  max-height: 300px;
+}
+
+.list-basket{
+  border: 1px solid #cdcdcd;
+  border-right: none;
+  border-left: none;
+  &__item{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    display: table;
+    width: 100%;
+    padding: 8px 10px;
+    >*{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    +*{
+      border-top: 1px solid #cdcdcd;
+    }
+    &-title{
+      position: relative;
+      padding-left: 20px;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: black;
+        display: block;
+        top: 50%;
+        margin-top: -3px;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
+    &-count{}
+    &-price{}
+    &-clear{
+      @include btn-clear;
+      fill: #fc145c;
+    }
+  }
+}
+
+.modal-table-text{
+  display: table;
+  font-size: 18px;
+  font-weight: 400;
+  &_row{
+    display: table-row;
+  }
+  &_cell{
+    display: table-cell;
+    vertical-align: middle;
+    +*{
+      padding-left: 35px;
+    }
+    &:empty{
+      padding: 4px 0;
+    }
+  }
+}
+
+.list-modal-toggle-checkbox{
+  &__elementsHidden{
+    &:not(.active){
+      display: none;
+    }
+  }
+}
+
+.header{
+  +.desc-card{
+    margin-top: -27px;
+  }
+}
+.desc-card{
+  padding: 70px 0;
+  &__title{
+    color: #2d59ca;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 31px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  &__text{
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.registration-block{
+  background-size: cover;
+  background-image: url('%=static=%content/registration-block-bg.jpg');
+  background-position: center;
+  padding: 78px 0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.45);
+  &__title{
+    color: black;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 31px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  &__text{
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: 11px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &_big{
+      font-size: 15px;
+    }
+  }
+  &_card{
+    background-image: url('%=static=%content/registration-card-bg.jpg');
+    box-shadow: none;
+  }
+  &__list{
+    @include nl;
+    font-size: 0;
+    width: 840px;
+    max-width: 100%;
+    margin: 10px -25px;
+    display: inline-block;
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      width: 33.33%;
+      padding: 15px 25px;
+    }
+    &-item{
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      &-icon{
+
+      }
+      &-title{
+        margin: 0;
+      }
+    }
+  }
+}
+
+.phone-block{
+  background-color: #fff;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 19px 10px;
+  margin: 8px 0;
+  &_textSmall{
+    font-size: 10px;
+    line-height: 13px;
+  }
+  &:first-child{
+    margin-top: 0;
+  }
+  &__phone-small{
+    font-size: 14px;
+    line-height: 22px;
+    display: block;
+    padding: 3px 0;
+  }
+  &__phone{
+    color: #2d59ca;
+    font-size: 21px;
+    line-height: 28px;
+    display: block;
+    margin: 6px 0;
+  }
+  &__text{
+    display: block;
+    &_margin{
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.banner-desc-table{
+  display: table;
+  margin: 12px 0;
+  width: 100%;
+  &__cell{
+    display: table-cell;
+    vertical-align: top;
+    background-color: white;
+    padding: 17px;
+    padding-bottom: 10px;
+    &_retreat{
+      background-color: transparent;
+      width: 14px;
+      padding: 0;
+    }
+  }
+}
+
+.banner-desc{
+  font-size: 12px;
+  color: #000;
+  line-height: 14px;
+  &__title{
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+  &__table{
+    display: table;
+    &-cell{
+      display: table-cell;
+      vertical-align: top;
+      +*{
+        padding-left: 9px;
+      }
+    }
+  }
+}
+
+.akardion{
+  &__item{
+    background-color: white;
+    border: 1px solid #2d59ca;
+    padding: 5px 15px;
+    padding-left: 28px;
+    position: relative;
+    +*{
+      margin-top: 11px;
+    }
+    &-title{
+      color: #2d59ca;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &:after{
+      content: '';
+      display: block;
+      @include triangle('right', #2d59ca, 7px, 13px);
+      position: absolute;
+      left: 11px;
+      top: 8px;
+      @include tr;
+    }
+    &-text{
+      color: black;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 5px 0;
+      display: none;
+    }
+    &.active{
+      .akardion__item-title{
+        color: #000;
+      }
+      &:after{
+        transform: rotate(90deg);
+      }
+    }
+    &.open{
+      .akardion__item-text{
+        display: block;
+      }
+    }
+  }
+}
+
+.desc-institution{
+  color: #666;
+  font-size: 12px;
+  &__subTitle{
+    font-weight: 300;
+    margin: 0;
+  }
+  &__title{
+    color: #363636;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+  &__text{
+  }
+  &__table{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: top;
+      &_img{
+        width: 210px;
+      }
+      &_desc{
+        padding: 0 22px;
+      }
+      &_contacts{
+        width: 217px;
+        background-color: #fff;
+      }
+    }
+  }
+  &__labels{
+    margin: 12px 0;
+  }
+  &__bonus{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    &-title{
+      margin: 0;
+    }
+    &-num{
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 19px;
+    }
+  }
+  &__titleTable{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: top;
+      &_textRight{
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+
+
+

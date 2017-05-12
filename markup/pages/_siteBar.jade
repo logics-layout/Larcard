@@ -7,14 +7,26 @@ block content
 
     .container
         +viewFilter(tagsList)
-
         br
+
+        if rightStyle && typeof(rightStyle) == 'object' && rightStyle.title
+            p!=rightStyle.title
+
         .content
             .content__left
                 block siteBar
 
             .content__right.hidden-sm-down
                 if rightStyle && typeof(rightStyle) == 'object'
+                    if rightStyle.phone
+                        .phone-block.not-styleLink.text-center
+                            span.phone-block__text По всем вопросам звоните #[br.hidden-md-down] по телефону колл-центра
+                            a(href="#").phone-block__phone: b.color-blue: span.color-blue__title 8 800 700 56 78
+                            span.phone-block__text Звонок бесплатный
+                        .phone-block.phone-block_textSmall.not-styleLink.text-center
+                            span.phone-block__text.phone-block__text_margin По всем вопросам #[br.hidden-md-down] технического обслуживания #[a(href="#").phone-block__phone-small: b.color-black: span.color-black__title +7 923 280 9579]
+                            span.phone-block__text.phone-block__text_margin По вопросам, связанным с #[br.hidden-md-down] проведением акций, рекламой и #[br.hidden-md-down] другим вопросам #[a(href="#").phone-block__phone-small: b.color-black: span.color-black__title +7 905 970 4010]
+
                     if rightStyle.balans
                         p.title-small: b ТЕКУЩИЙ БАЛАНС
                         table
@@ -100,6 +112,8 @@ block content
                         button.btn.btn-red.btn-border Получить карту
                         span.hidden-xs-down &nbsp;
                         button.btn.btn-blue(style="") Стать партнёром
+
+
 
 
 

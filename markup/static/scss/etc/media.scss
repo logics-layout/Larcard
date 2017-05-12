@@ -10,6 +10,10 @@ body, html{
 //}
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .phone-block__phone {
+    font-size: 18px;
+    line-height: 21px;
+  }
   .header{
     &__nav{
       position: relative;
@@ -97,6 +101,57 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .desc-card{
+    padding: 43px 0;
+    &__title{
+      font-size: 17px;
+      line-height: 25px;
+    }
+    &__text{
+      font-size: 12px;
+      line-height: 21px;
+    }
+  }
+  .registration-block {
+    &__list {
+      margin: 10px -10px;
+      li {
+        width: 50%;
+        padding: 15px 10px;
+      }
+    }
+  }
+  .count-block {
+    > * {
+      font-size: 16px;
+    }
+  }
+  .list-basket {
+    &__item {
+      display: block;
+      margin: -5px;
+      position: relative;
+      padding-right: 30px;
+      font-size: 16px;
+      > * {
+        display: inline-block;
+        padding: 5px;
+      }
+      &-title {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+      &-clear{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 25px;
+      }
+    }
+  }
   .style-radio {
     font-size: 14px;
     &__table {
@@ -150,6 +205,18 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .banner-desc-table{
+    display: block;
+    &__cell{
+      display: block;
+      +*{
+        margin-top: 10px;
+      }
+      &_retreat{
+        display: none;
+      }
+    }
+  }
   .auth-sign {
     &__item {
       font-size: 14px;
