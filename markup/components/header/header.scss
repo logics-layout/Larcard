@@ -1,5 +1,7 @@
 .header{
   margin-bottom: 27px;
+  position: relative;
+  z-index: 9;
   &__nav{
     background-color: white;
     box-shadow: 0.6px 0.8px 4px #a4a4a4;

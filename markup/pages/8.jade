@@ -1,0 +1,282 @@
+extends _siteBar
+
+block head
+    - var headData = {title: "8.psd"}
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+    - var rightStyle = {stock: true}
+    - var headerData = { style: 'user'}
+
+block siteBar
+    .row
+        .col-lg-4
+            p: b Всего like бонусов: &nbsp;#[span.color-blue 7000 руб]
+            table
+                thead
+                    tr
+                        th Заведение
+                        th.text-center Бонусы
+                tbody
+                    -for(var i=0;i<12;i++)
+                        tr
+                            td Название
+                            td.text-center 700
+
+        .col-lg-8
+            p: b История операций:
+            table
+                thead
+                    tr
+                        th Заведение
+                        th.text-center Дата транзакции
+                        th.text-center Время
+                        th.text-center Сумма чека
+                        th.text-center Сумма бонуса
+                tbody
+                    -for(var i=0;i<12;i++)
+                        tr
+                            td Название
+                            td.text-center 17.03.2017
+                            td.text-center 17:03
+                            td.text-center 1233 руб
+                            td.text-center - 13 руб
+    br
+    p: b Настройки
+
+    .tabs
+        ul.tabs__nav.not-styleLink.dib
+            li: a(href="#tabs-1"): span Изменить пароль
+            li.active: a(href="#tabs-2"): span Анкета пользователя
+            li.right: a(href=".tabs-3"): span Привязать соц. сети
+        |&nbsp;&nbsp;&nbsp;
+        .tabs__content.dib.hidden-md-down
+            .tabs__content-item.tabs-3
+                ul.network.not-styleLink
+                    li: a(href="#"): i.s-vk-grey-big
+                    li: a(href="#"): i.s-fs-grey-big
+
+        br
+        br
+        .tabs__content
+            .tabs__content-item.tabs-3.hidden-lg-up
+                ul.network.not-styleLink
+                    li: a(href="#"): i.s-vk-grey-big
+                    li: a(href="#"): i.s-fs-grey-big
+            .tabs__content-item#tabs-1
+                .row: .col-lg-8
+                    form
+                        .two.form-group
+                            input.form-control.form-control_min(placeholder="Ваш старый пароль")
+                        .two.form-group
+                            input.form-control.form-control_min(placeholder="Новый пароль")
+                        .two.form-group.form-group_big
+                            input.form-control.form-control_min(placeholder="Повторите пароль")
+
+                        button.btn.btn-red.btn-md.ttu Изменить пароль
+
+            .tabs__content-item#tabs-2.active
+                form
+                    .row
+                        .col-lg-5.col-md-6
+                            .two.form-group
+                                input.form-control.form-control_min(placeholder="Введите номер карты")
+                            .two.form-group
+                                input.form-control.form-control_min(placeholder="Ваше имя", value="Пётр")
+                            .two.form-group
+                                input.form-control.form-control_min(placeholder="Ваш телефон")
+                            .two.form-group
+                                input.form-control.form-control_min(placeholder="Дата рождения")
+                        .col-lg-5.col-md-6
+                            .two.form-group(style="opacity: 0;"): input.form-control.form-control_min(placeholder="Введите номер карты")
+                            .two.form-group
+                                input.form-control.form-control_min(placeholder="Фамилия")
+                            .two.form-group
+                                input.form-control.form-control_min(placeholder="Ваш e-mail")
+                            .two.form-group.form-group_checkbox
+                                span.MuseoSansCyrl Пол:
+                                | &nbsp;&nbsp;
+                                label.style-radio
+                                    input(type='radio' name='mm', checked).style-radio__input
+                                    span.style-radio__table.style-radio__table_smallMargin
+                                        span.style-radio__table-cell.style-radio__table-cell_el
+                                            span.style-radio__el.style-radio__el_min
+                                        span.style-radio__table-cell
+                                            span.style-radio__title.text-small.text-small_two М
+                                | &nbsp;&nbsp;
+                                label.style-radio.style-radio__table_smallMargin
+                                    input(type='radio' name='mm').style-radio__input
+                                    span.style-radio__table
+                                        span.style-radio__table-cell.style-radio__table-cell_el
+                                            span.style-radio__el.style-radio__el_min
+                                        span.style-radio__table-cell
+                                            span.style-radio__title.text-small.text-small_two Ж
+                    br
+                    .row
+                        .col-lg-5.col-md-6
+                            .form-group
+                                label Район проживания
+                                select.select-small
+                                    option Выбрать
+                                    option item 1
+                                    option item 2
+                                    option item 3
+                                    option item 4
+                        .col-lg-5.col-md-6
+                            .form-group
+                                label Район работы
+                                select.select-small
+                                    option Выбрать
+                                    option item 1
+                                    option item 2
+                                    option item 3
+                                    option item 4
+
+                    br
+                    .row
+                        .col-xs-12
+                            .btn-toggle-profile-descTextBlockMain
+                                p.btn-toggle-profile-descText В нем будет текст. Будем предлагать пользователям какие-то плюшки за ее заполнение. Текст всплывашки будет чуть позже. В нем будет текст. Будем предлагать пользователям какие-то плюшки за ее заполнение. Текст всплывашки будет чуть позже. В нем будет текст. Будем предлагать  пользователям какие-то плюшки за ее заполнение. Текст всплывашки будет чуть позже.
+                        .col-lg-5.col-md-6
+                            .two.form-group
+                                .btn-toggle-profile
+                                    button.btn.btn-blue.btn-width.ttu.btn-md Расширеная анкета
+
+                    .content-toggle-profile
+                        br
+                        label Адрес для доставки
+                        .row
+                            .col-lg-2
+                                .two.form-group
+                                    input.form-control.form-control_min(placeholder="Индекс")
+                            .col-lg-3
+                                .two.form-group
+                                    input.form-control.form-control_min(placeholder="Город")
+                            .col-lg-3
+                                .two.form-group
+                                    input.form-control.form-control_min(placeholder="Улица")
+                            .col-lg-2
+                                .two.form-group
+                                    input.form-control.form-control_min(placeholder="№ Дома")
+                            .col-lg-2
+                                .two.form-group
+                                    input.form-control.form-control_min(placeholder="Квартира")
+
+                        .row
+                            .col-lg-5
+                                .two.form-group
+                                    label Семейное положение
+                                    select.select-small
+                                        option Выбрать
+                                        option item 1
+                                        option item 2
+                                        option item 3
+                                        option item 4
+                                .two.form-group
+                                    input.form-control.form-control_min(placeholder="Ваша профессия")
+                                .two.form-group
+                                    label Наличие личного автомобиля
+                                    select.select-small
+                                        option Выбрать
+                                        option item 1
+                                        option item 2
+                                        option item 3
+                                        option item 4
+
+                            .col-lg-7
+                                .row
+                                    .col-lg-4
+                                        .two.form-group
+                                            label Дети
+                                            input.form-control.form-control_min(placeholder="Количество")
+                                    .col-lg-8
+                                        label &nbsp;
+                                        .two.form-group.form-group_checkbox
+                                            span.MuseoSansCyrl.color-black Возраст
+                                            | &nbsp;&nbsp;
+                                            label.style-radio
+                                                input(type='radio' name='mm', checked).style-radio__input
+                                                span.style-radio__table.style-radio__table_smallMargin
+                                                    span.style-radio__table-cell.style-radio__table-cell_el
+                                                        span.style-radio__el.style-radio__el_min
+                                                    span.style-radio__table-cell
+                                                        span.style-radio__title.text-small.text-small_two 0-6
+                                            | &nbsp;&nbsp;
+                                            label.style-radio.style-radio__table_smallMargin
+                                                input(type='radio' name='mm').style-radio__input
+                                                span.style-radio__table
+                                                    span.style-radio__table-cell.style-radio__table-cell_el
+                                                        span.style-radio__el.style-radio__el_min
+                                                    span.style-radio__table-cell
+                                                        span.style-radio__title.text-small.text-small_two 7-12
+                                            | &nbsp;&nbsp;
+                                            label.style-radio.style-radio__table_smallMargin
+                                                input(type='radio' name='mm').style-radio__input
+                                                span.style-radio__table
+                                                    span.style-radio__table-cell.style-radio__table-cell_el
+                                                        span.style-radio__el.style-radio__el_min
+                                                    span.style-radio__table-cell
+                                                        span.style-radio__title.text-small.text-small_two 13-17
+
+                                .row
+                                    .col-lg-7
+                                        .two.form-group
+                                            input.form-control.form-control_min(placeholder="Какой напиток предпочитаете")
+                                        .two.form-group
+                                            label Какую кухню предпочитаете
+                                            select.select-small
+                                                option Выбрать
+                                                option item 1
+                                                option item 2
+                                                option item 3
+                                                option item 4
+                        br
+
+
+
+                    .row: .col-lg-5.col-md-6
+                        button.btn.btn-red.btn-width.ttu.btn-md Изменить
+
+
+
+
+
+
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

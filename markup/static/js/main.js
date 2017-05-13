@@ -2,6 +2,8 @@ $(document).on('click', '[href="#"]', function(e) {
     return e.preventDefault();
 });
 
+$('table').wrap("<div class='tableWrap'></div>");
+
 var IScrollFn = function () {
     if (typeof IScroll !== "undefined" && IScroll !== null){
         $('.IScroll').each(function () {
@@ -82,7 +84,42 @@ if ($.fn.slick) {
             },
         ]
     });
-//
+
+    $('.slider-list-photo').slick({
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        dots: false,
+        arrows: true,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
+        // adaptiveHeight: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                }
+            },
+            {
+                breakpoint: 688,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 456,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
+
     $('.header__slider-el').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -262,7 +299,7 @@ $('.modal-show').modal('show');
 var modalToggleCheckbox = $('.list-modal-toggle-checkbox').find('input');
 modalToggleCheckbox.change(function(e){
     var _this = $(this),
-        checkedEl = modalToggleCheckbox.filter(':checked');
+        checkedEl = modalToggleCheckbox.filter(':checked'),
         fn = checkedEl.data('toggle-fn');
 
     $('.list-modal-toggle-checkbox__elementsHidden')[fn]('active');
@@ -272,8 +309,30 @@ $('.akardion__item-title').click(function () {
     var _this = $(this),
         parent = _this.parent();
 
-
     parent.toggleClass('active').find('.akardion__item-text').slideToggle(300);
     parent.siblings().removeClass('active open').find('.akardion__item-text').slideUp(300)
+});
+
+$('.btn-toggle-profile').click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.btn-toggle-profile-descTextBlockMain').fadeToggle(300);
+   $('.content-toggle-profile').slideToggle(300);
+});
+
+$(".tabs__nav").find('a').click(function (e) {
+    e.preventDefault();
+   var _this = $(this),
+       block = $(_this.attr('href')),
+       parent = _this.parent(),
+       className = 'active',
+       time = 300;
+
+    if(block[0]){
+        parent.addClass('active');
+        block.delay(time).fadeIn(time);
+    }
+    parent.siblings().removeClass(className);
+    $('.tabs__content-item').not(block).fadeOut(time);
 
 });

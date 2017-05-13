@@ -30,7 +30,7 @@ th {
     > tr {
       > th,
       > td {
-        padding: 6px 11px;
+        padding: 6px 8px;
         line-height: normal;
         vertical-align: middle;
         +*{
@@ -63,7 +63,7 @@ th {
     font-weight: 700;
     color: black;
     line-height: 20px;
-    font-size: 13px;
+    font-size: 12px;
 
     //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
     //  font-size: 13px;

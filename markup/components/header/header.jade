@@ -4,6 +4,16 @@ mixin header(headerData)
     if typeof(headerData) == 'object'
         - style = headerData.style
 
+
+
+    .card-desc.hidden-sm-down
+        .container
+            .card-desc__table
+                .card-desc__img: +img('content/card', 'png')
+                h1.card-desc__text: span Карта LIKE – это новый формат карт лояльности. #[br.hidden-md-down] Принимается в магазинах, бутиках, ресторанах, #[br.hidden-md-down] кафе и службах доставки
+
+
+
     .header.not-styleLink
         .header__nav
             .container
@@ -42,9 +52,10 @@ mixin header(headerData)
 
 
                         else
-                            a(href="#"): span.btn.btn-red.btn-border Регистрация
-                            |&nbsp;&nbsp;&nbsp;
-                            a(href="#"): span(style="width: 99px;").btn.btn-blue Войти
+                            .header__nav-links
+                                a(href="#"): span.btn.btn-red.btn-border Регистрация
+                                |&nbsp;&nbsp;&nbsp;
+                                a(href="#"): span(style="width: 99px;").btn.btn-blue Войти
 
 
 

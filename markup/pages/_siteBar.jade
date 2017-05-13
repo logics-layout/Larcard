@@ -41,7 +41,7 @@ block content
                                         td 700 руб
 
                     if rightStyle.stock
-                        p.title-small: b РЕКОМЕНДУЕМ АКЦИИ
+                        p.title-small: b Рекомендуем акции:
                         .stock-min
                             -for(var i = 0; i<2; i++)
                                 .stock-min__item
@@ -89,7 +89,7 @@ block content
             br
             br
             br
-            .partners
+            .partners.arrow-style
                 .partners__list
                     -for(var i = 0; i<9; i++)
                         .partners__section: +img('content/partners/1')

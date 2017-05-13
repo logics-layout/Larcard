@@ -13,20 +13,6 @@
     display: block;
     margin-bottom: 6px;
   }
-  &__network{
-    @include nl;
-    font-size: 0;
-    margin: -2px;
-    text-align: center;
-    li{
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px;
-      a{
-        display: block;
-      }
-    }
-  }
   &__text{
     line-height: 21px;
     padding-top: 15px;

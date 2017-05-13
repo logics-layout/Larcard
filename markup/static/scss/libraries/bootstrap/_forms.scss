@@ -269,6 +269,13 @@ input[type="search"] {
   &.two{
     margin-bottom: 8px;
   }
+  &_big{
+    margin-bottom: 22px !important;
+  }
+  &_checkbox{
+    padding-top: 7px;
+    padding-bottom: 3px;
+  }
   &.required{
     &:after{
       content: '*';
